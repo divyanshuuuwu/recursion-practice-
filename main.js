@@ -90,12 +90,22 @@
 // }
 // f(5)
 
-// print form 1 to n using backtracking
-function f(i,n){
-    if(i<1){return}
+// // print form 1 to n using backtracking
+// function f(i,n){
+//     if(i<1){return}
+//     else{
+//         f(i-1, n)
+//         console.log(i)
+//     }
+// }
+// f(3,3)
+
+// print form n to 1 using backtracking
+function f(i , n){
+    if(i>n){ return}
     else{
-        f(i-1, n)
+        f(i+1, n)
         console.log(i)
     }
 }
-f(3,3)
+f(1, 5)
