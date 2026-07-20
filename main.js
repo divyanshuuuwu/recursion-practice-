@@ -39,18 +39,44 @@
 // nTimes()
 
 // print linearly from 1 to n
-let n = Number(prompt("enter the number"))
-let count = 1;
+// let n = Number(prompt("enter the number"))
+// let count = 1;
 
-function f(){
-    if(n < count){
-        return;
-    }
-    else{
-        console.log(count)
-        count++
-        f()
-    }
-}
+// function f(){
+//     if(n < count){
+//         return;
+//     }
+//     else{
+//         console.log(count)
+//         count++
+//         f()
+//     }
+// }
 
-f()
+// f()
+
+// print n to 1
+
+// let n = Number(prompt("enter"))
+// let count = n
+
+// function f(){
+//     if(count < 1){
+//         return
+//     }
+//     else{
+//         console.log(count)
+//         count--
+//         f()
+//     }
+// }
+
+// f()
+
+// function f(n) {
+//     if (n === 0) return;
+
+//     console.log(n);
+//     f(n - 1);
+// }
+// f(5)
