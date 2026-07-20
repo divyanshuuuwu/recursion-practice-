@@ -20,3 +20,20 @@
 // }
 
 // run()
+
+// print name n times
+let n = Number(prompt("enter your number"))
+let count = 0;
+
+function nTimes(){
+    if(count === n){
+        return;
+    }
+    else{
+        console.log("name")
+        count++
+        nTimes()
+    }
+}
+
+nTimes()
