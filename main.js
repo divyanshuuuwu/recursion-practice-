@@ -52,6 +52,15 @@
 //         f()
 //     }
 // }
+// function f(i,n){
+//     if(i > n){
+//         return
+//     }
+//      console.log(i)
+//      f(i+1 , n)
+
+// }
+// f(1,5)
 
 // f()
 
@@ -74,9 +83,19 @@
 // f()
 
 // function f(n) {
-//     if (n === 0) return;
+//     if (n < 1) return;
 
 //     console.log(n);
 //     f(n - 1);
 // }
 // f(5)
+
+// print form 1 to n using backtracking
+function f(i,n){
+    if(i<1){return}
+    else{
+        f(i-1, n)
+        console.log(i)
+    }
+}
+f(3,3)
