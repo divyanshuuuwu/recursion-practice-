@@ -22,18 +22,35 @@
 // run()
 
 // print name n times
-let n = Number(prompt("enter your number"))
-let count = 0;
+// let n = Number(prompt("enter your number"))
+// let count = 0;
 
-function nTimes(){
-    if(count === n){
+// function nTimes(){
+//     if(count === n){
+//         return;
+//     }
+//     else{
+//         console.log("name")
+//         count++
+//         nTimes()
+//     }
+// }
+
+// nTimes()
+
+// print linearly from 1 to n
+let n = Number(prompt("enter the number"))
+let count = 1;
+
+function f(){
+    if(n < count){
         return;
     }
     else{
-        console.log("name")
+        console.log(count)
         count++
-        nTimes()
+        f()
     }
 }
 
-nTimes()
+f()
