@@ -101,11 +101,25 @@
 // f(3,3)
 
 // print form n to 1 using backtracking
-function f(i , n){
-    if(i>n){ return}
+// function f(i , n){
+//     if(i>n){ return}
+//     else{
+//         f(i+1, n)
+//         console.log(i)
+//     }
+// }
+// f(1, 5)
+
+
+// sum of n numbers using recursion
+
+function f(i,sum){
+    if(i<1){
+        console.log(sum)
+        return}
     else{
-        f(i+1, n)
-        console.log(i)
+        f(i-1, sum+i)
     }
 }
-f(1, 5)
+
+f(3,0)
