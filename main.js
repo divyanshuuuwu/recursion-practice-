@@ -136,12 +136,24 @@
 // console(sum(3))
 
 // factorial of n parametrised
-function f (i,ans){
-    if(i<1){
+// function f (i,ans){
+//     if(i<1){
+//         return ans
+//     }
+//     return f(i-1,ans*i)
+
+// }
+
+// let xyz = f(3,1)
+// console.log(xyz)
+
+// factorial of n functional
+function f(n){
+    if(n<1){
         return 1
     }
-    return f(i-1,ans*i)
-
+return n * f(n-1)
+        
 }
 
-console.log(f(3,1))
+console.log(f(3))
