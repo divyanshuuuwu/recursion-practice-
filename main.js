@@ -125,13 +125,23 @@
 // f(3,0)
 
 // sum of first n numbers functional
+// function sum(n){
+//     if(n === 0){
+//         return 0
+//     }
+//     else{
+//         return n + sum(n-1)
+//     }
+// }
+// console(sum(3))
 
-function sum(n){
-    if(n === 0){
-        return 0
+// factorial of n parametrised
+function f (i,ans){
+    if(i<1){
+        return 1
     }
-    else{
-        return n + sum(n-1)
-    }
+    return f(i-1,ans*i)
+
 }
-console(sum(3))
+
+console.log(f(3,1))
