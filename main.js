@@ -111,15 +111,27 @@
 // f(1, 5)
 
 
-// sum of n numbers using recursion
+// sum of n numbers using parameterized
 
-function f(i,sum){
-    if(i<1){
-        console.log(sum)
-        return}
+// function f(i,sum){
+//     if(i<1){
+//         console.log(sum)
+//         return}
+//     else{
+//         f(i-1, sum+i)
+//     }
+// }
+
+// f(3,0)
+
+// sum of first n numbers functional
+
+function sum(n){
+    if(n === 0){
+        return 0
+    }
     else{
-        f(i-1, sum+i)
+        return n + sum(n-1)
     }
 }
-
-f(3,0)
+console(sum(3))
