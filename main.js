@@ -159,17 +159,38 @@
 // console.log(f(3))
 
 // reverse an array using recursion two pointer
+// let arr = [1,2,3,4,5,6]
 
+// function reverse(l,r){
+//     if(l>=r){return}
+//     // swap
+//     let temp = arr[l]
+//     arr[l] = arr[r]
+//     arr[r] = temp
+//     reverse(l+1,r-1)
+// }
+
+// reverse(0, arr.length - 1);
+// console.log(arr)
+
+// reverse an array using recursion one pointer
 let arr = [1,2,3,4,5,6]
 
-function reverse(l,r){
-    if(l>=r){return}
-    // swap
-    let temp = arr[l]
-    arr[l] = arr[r]
-    arr[r] = temp
-    reverse(l+1,r-1)
+function reverse(i){
+    if(i>=arr.length/2){
+        return
+    }
+    //swap
+    let temp = arr[i]
+    arr[i] = arr[arr.length-i-1]
+    arr[arr.length-i-1] = temp
+    reverse(i+1)
+
 }
 
-reverse(0, arr.length - 1);
+reverse(0)
 console.log(arr)
+
+
+
+
