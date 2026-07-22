@@ -174,23 +174,39 @@
 // console.log(arr)
 
 // reverse an array using recursion one pointer
-let arr = [1,2,3,4,5,6]
+// let arr = [1,2,3,4,5,6]
 
-function reverse(i){
-    if(i>=arr.length/2){
-        return
+// function reverse(i){
+//     if(i>=arr.length/2){
+//         return
+//     }
+//     //swap
+//     let temp = arr[i]
+//     arr[i] = arr[arr.length-i-1]
+//     arr[arr.length-i-1] = temp
+//     reverse(i+1)
+
+// }
+
+// reverse(0)
+// console.log(arr)
+
+// check if a string is a palindrome
+ let str = "madam"
+
+ function f(i){
+    if(i>=str.length/2){return true}
+
+    if(str[i] != str[str.length-i-1]){
+        return false
     }
-    //swap
-    let temp = arr[i]
-    arr[i] = arr[arr.length-i-1]
-    arr[arr.length-i-1] = temp
-    reverse(i+1)
+   return f(i+1)
+ }
 
-}
+ console.log(f(0));
+ 
 
-reverse(0)
-console.log(arr)
-
+ 
 
 
 
