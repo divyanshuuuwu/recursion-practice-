@@ -148,12 +148,28 @@
 // console.log(xyz)
 
 // factorial of n functional
-function f(n){
-    if(n<1){
-        return 1
-    }
-return n * f(n-1)
+// function f(n){
+//     if(n<1){
+//         return 1
+//     }
+// return n * f(n-1)
         
+// }
+
+// console.log(f(3))
+
+// reverse an array using recursion two pointer
+
+let arr = [1,2,3,4,5,6]
+
+function reverse(l,r){
+    if(l>=r){return}
+    // swap
+    let temp = arr[l]
+    arr[l] = arr[r]
+    arr[r] = temp
+    reverse(l+1,r-1)
 }
 
-console.log(f(3))
+reverse(0, arr.length - 1);
+console.log(arr)
