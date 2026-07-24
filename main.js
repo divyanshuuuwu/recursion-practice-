@@ -192,19 +192,20 @@
 // console.log(arr)
 
 // check if a string is a palindrome
- let str = "madam"
+//  
 
- function f(i){
-    if(i>=str.length/2){return true}
+// fibonacci of n using recursion
 
-    if(str[i] != str[str.length-i-1]){
-        return false
+function fibo(n){
+    if(n<=1){
+        return n
     }
-   return f(i+1)
- }
 
- console.log(f(0));
- 
+    return fibo(n-1)+fibo(n-2)
+
+}
+
+console.log(fibo(4))
 
  
 
