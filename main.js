@@ -229,11 +229,23 @@
 
 // character hashing
 
-let str = "banana"
+// let str = "banana"
 
-let hash = new Array(26).fill(0)
+// let hash = new Array(26).fill(0)
+// for(let i = 0; i<str.length; i++){
+//     let index = str[i].charCodeAt(0) - "a".charCodeAt(0)
+//     hash[index]++
+// }
+
+// console.log(hash)
+
+// for all characters
+
+let str = "BanaNa"
+
+let hash = new Array(256).fill(0)
 for(let i = 0; i<str.length; i++){
-    let index = str[i].charCodeAt(0) - "a".charCodeAt(0)
+    let index = str[i].charCodeAt(0)
     hash[index]++
 }
 
