@@ -217,12 +217,24 @@
 // hashing is technique for storing and finding  data quickly using a hash function
 
 //frequency count
-let arr = [3,3,2,5,6,4,3,2,5,6]
+// let arr = [3,3,2,5,6,4,3,2,5,6]
 
-let hash = new Array(10).fill(0);
+// let hash = new Array(10).fill(0);
 
-for(let i = 0; i<arr.length; i++){
-    hash[arr[i]]++
+// for(let i = 0; i<arr.length; i++){
+//     hash[arr[i]]++
+// }
+
+// console.log(hash)  
+
+// character hashing
+
+let str = "banana"
+
+let hash = new Array(26).fill(0)
+for(let i = 0; i<str.length; i++){
+    let index = str[i].charCodeAt(0) - "a".charCodeAt(0)
+    hash[index]++
 }
 
 console.log(hash)
