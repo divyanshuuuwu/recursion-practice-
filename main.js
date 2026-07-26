@@ -196,18 +196,33 @@
 
 // fibonacci of n using recursion
 
-function fibo(n){
-    if(n<=1){
-        return n
-    }
+// function fibo(n){
+//     if(n<=1){
+//         return n
+//     }
 
-    return fibo(n-1)+fibo(n-2)
+//     return fibo(n-1)+fibo(n-2)
 
+// }
+
+// console.log(fibo(4))
+
+
+
+
+
+
+
+//  HASHING
+// hashing is technique for storing and finding  data quickly using a hash function
+
+//frequency count
+let arr = [3,3,2,5,6,4,3,2,5,6]
+
+let hash = new Array(10).fill(0);
+
+for(let i = 0; i<arr.length; i++){
+    hash[arr[i]]++
 }
 
-console.log(fibo(4))
-
- 
-
-
-
+console.log(hash)
