@@ -241,12 +241,24 @@
 
 // for all characters
 
-let str = "BanaNa"
+// let str = "BanaNa"
 
-let hash = new Array(256).fill(0)
-for(let i = 0; i<str.length; i++){
-    let index = str[i].charCodeAt(0)
-    hash[index]++
+// let hash = new Array(256).fill(0)
+// for(let i = 0; i<str.length; i++){
+//     let index = str[i].charCodeAt(0)
+//     hash[index]++
+// }
+
+// console.log(hash)
+
+// hash maping
+
+const arr = [2,1,3,4,2,2,4,1,7]
+
+const mpp = new Map();
+
+for(const num of arr){
+    mpp.set(num,(mpp.get(num) || 0)+1)
 }
+console.log(mpp);
 
-console.log(hash)
