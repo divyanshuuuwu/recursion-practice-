@@ -252,13 +252,39 @@
 // console.log(hash)
 
 // hash maping
+// const arr = [2,1,3,4,2,2,4,1,7]
 
-const arr = [2,1,3,4,2,2,4,1,7]
+// const mpp = new Map();
 
-const mpp = new Map();
+// for(const num of arr){
+//     mpp.set(num,(mpp.get(num) || 0)+1)
+// }
+// console.log(mpp);
 
-for(const num of arr){
-    mpp.set(num,(mpp.get(num) || 0)+1)
+//selection sort
+function selectionSort(arr) {
+
+    for (let i = 0; i < arr.length - 1; i++) {
+
+        let minIndex = i;
+
+        for (let j = i ; j < arr.length; j++) {
+
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+
+        }
+
+        let temp = arr[i]
+        arr[i] = arr[minIndex]
+        arr[minIndex] = temp
+
+    }
+
+    return arr;
 }
-console.log(mpp);
 
+const arr = [5, 3,2, 8, 4, 2];
+
+console.log(selectionSort(arr));
