@@ -291,17 +291,23 @@
 
 //bubble sort
 
-let arr = [52, 54, 28, 87, 66, 12, 38]
-
-for(let i=arr.length-1; i>=1; i-- ){
+function bubble(arr){
+    for(let i=arr.length-1; i>=1; i-- ){
+    let didswap = 0
     for(let j=0; j<i; j++){
         if(arr[j]>arr[j+1]){
          let temp = arr[j]   
          arr[j] = arr[j+1]
          arr[j+1] = temp
+         didswap = 1
         }
     }
+    if(didswap === 0){
+        break
+    }
 }
-
-console.log(arr)
+return arr
+}
+let arr = [52, 54, 28, 87, 66, 12, 38]
+console.log(bubble(arr))
 
