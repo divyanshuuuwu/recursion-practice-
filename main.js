@@ -262,29 +262,46 @@
 // console.log(mpp);
 
 //selection sort
-function selectionSort(arr) {
+// function selectionSort(arr) {
 
-    for (let i = 0; i < arr.length - 1; i++) {
+//     for (let i = 0; i < arr.length - 1; i++) {
 
-        let minIndex = i;
+//         let minIndex = i;
 
-        for (let j = i ; j < arr.length; j++) {
+//         for (let j = i+1 ; j < arr.length; j++) {
 
-            if (arr[j] < arr[minIndex]) {
-                minIndex = j;
-            }
+//             if (arr[j] < arr[minIndex]) {
+//                 minIndex = j;
+//             }
 
+//         }
+
+//         let temp = arr[i]
+//         arr[i] = arr[minIndex]
+//         arr[minIndex] = temp
+
+//     }
+
+//     return arr;
+// }
+
+// const arr = [5, 3,2, 8, 4, 2];
+
+// console.log(selectionSort(arr));
+
+//bubble sort
+
+let arr = [52, 54, 28, 87, 66, 12, 38]
+
+for(let i=arr.length-1; i>=1; i-- ){
+    for(let j=0; j<i; j++){
+        if(arr[j]>arr[j+1]){
+         let temp = arr[j]   
+         arr[j] = arr[j+1]
+         arr[j+1] = temp
         }
-
-        let temp = arr[i]
-        arr[i] = arr[minIndex]
-        arr[minIndex] = temp
-
     }
-
-    return arr;
 }
 
-const arr = [5, 3,2, 8, 4, 2];
+console.log(arr)
 
-console.log(selectionSort(arr));
