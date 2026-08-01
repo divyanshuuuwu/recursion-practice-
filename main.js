@@ -285,29 +285,50 @@
 //     return arr;
 // }
 
-// const arr = [5, 3,2, 8, 4, 2];
+// const arr = [5, 3, 2, 8, 4, 2];
 
 // console.log(selectionSort(arr));
 
 //bubble sort
 
-function bubble(arr){
-    for(let i=arr.length-1; i>=1; i-- ){
-    let didswap = 0
-    for(let j=0; j<i; j++){
-        if(arr[j]>arr[j+1]){
-         let temp = arr[j]   
-         arr[j] = arr[j+1]
-         arr[j+1] = temp
-         didswap = 1
-        }
-    }
-    if(didswap === 0){
-        break
-    }
-}
-return arr
-}
-let arr = [52, 54, 28, 87, 66, 12, 38]
-console.log(bubble(arr))
+// function bubble(arr){
+//     for(let i=arr.length-1; i>=1; i-- ){
+//     let didswap = 0
+//     for(let j=0; j<i; j++){
+//         if(arr[j]>arr[j+1]){
+//          let temp = arr[j]   
+//          arr[j] = arr[j+1]
+//          arr[j+1] = temp 
+//          didswap = 1
+//         }
+//     }
+//     if(didswap === 0){
+//         break
+//     }
+// }
+// return arr
+// }
+// let arr = [52, 54, 28, 87, 66, 12, 38]
+// console.log(bubble(arr))
 
+//insesrtion sort
+
+function insertion(arr){
+    for(let i=1; i<arr.length; i++){
+        let current = arr[i]
+        let j = i-1
+        while(j>=0 && arr[j] > current){
+            arr[j+1] = arr[j]
+            j--
+        }
+
+        arr[j+1] = current
+
+    }
+    return arr
+    
+}
+
+let arr = [20, 30, 67, 12, 8, 15]
+
+console.log(insertion(arr))
